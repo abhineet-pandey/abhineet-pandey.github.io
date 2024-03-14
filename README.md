@@ -1,18 +1,18 @@
-# GitHub Resume
+# Abhineet's Resume
 
-A simple GitHub resume website showcasing my profile, skills, and projects.
 
 ## Personal Information
 
-- **Name:** Your Name
-- **Location:** Your Location
-- **Email:** your_email@example.com
+- **Name:** Abhineet Pandey
+- **Location:** Albany, NY
+- **Email:** *****
 - **GitHub:** [github.com/abhineet-pandey](https://github.com/abhineet-pandey)
+- **LinkedIn** 
 
 ## Skills
 
-- Skill 1
-- Skill 2
+- Machine Learning
+- computer vision
 - Skill 3
 
 ## Projects
