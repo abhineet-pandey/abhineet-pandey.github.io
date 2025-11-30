@@ -1,72 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Abhineet-Pandey</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-        }
-        header {
-            background-color: #333;
-            color: #fff;
-            padding: 20px;
-            text-align: center;
-        }
-        h1 {
-            margin-bottom: 10px;
-        }
-        p {
-            margin-top: 0;
-        }
-        .container {
-            width: 80%;
-            margin: 20px auto;
-            background-color: #fff;
-            padding: 20px;
-            border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-        .avatar {
-            width: 150px;
-            border-radius: 50%;
-            margin: 0 auto;
-            display: block;
-        }
-    </style>
+    <title>Abhineet Pandey | AI Researcher & Developer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
-    <header>
-        <h1>Abhineet's Resume</h1>
-        <p>Doctoral Scholar at the Vanguard of Revolutionary AI, Machine Learning, and Computer Vision Exploration</p>
-    </header>
 
-    <div class="container">
-        <img class="avatar" src="https://avatars.githubusercontent.com/abhineet-pandey" alt="Your GitHub Avatar">
-        <h2>Abhinet Pandey</h2>
-        <p>Location: Albany, NY</p>
-        <p>Email: your_email@example.com</p>
-        <p>GitHub: <a href="https://github.com/abhineet-pandey">github.com/abhineet-pandey</a></p>
-        <p>LinkedIn: <a href="https://www.linkedin.com/in/pabhineet">linkedin.com/in/pabhineet</a></p>
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">Abhineet.</a>
+            <div class="nav-links">
+                <a href="index.html" class="active">Home</a>
+                <a href="resume.html">Resume</a>
+                <a href="projects.html">Projects</a>
+                <a href="thoughts.html">Thoughts</a>
+                <a href="hobbies.html">Hobbies</a>
+            </div>
+            <div class="menu-toggle">☰</div>
+        </div>
+    </nav>
 
-        <h3>Skills</h3>
-        <ul>
-            <li>Machine Learning</li>
-            <li>Computer vision</li>
-            <li>Artificial Intelligence</li>
-            <!-- Add more skills as needed -->
-        </ul>
-        <h3>Projects</h3>
-        <ul>
-            <li><a href="#">Project 1</a></li>
-            <li><a href="#">Project 2</a></li>
-            <li><a href="#">Project 3</a></li>
-            <!-- Add more projects as needed -->
-        </ul>
-    </div>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <img src="https://avatars.githubusercontent.com/abhineet-pandey" alt="Abhineet Pandey" class="hero-avatar">
+            <h1>Abhineet Pandey</h1>
+            <p class="hero-subtitle">Doctoral Scholar | AI & Computer Vision Researcher</p>
+            <p>Exploring the frontiers of Artificial Intelligence, Machine Learning, and Computer Vision. Building
+                intelligent systems that see and understand the world.</p>
+            <div style="margin-top: var(--spacing-md);">
+                <a href="projects.html" class="btn btn-primary">View My Work</a>
+                <a href="resume.html" class="btn"
+                    style="background: var(--bg-secondary); margin-left: var(--spacing-sm);">Resume</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Preview -->
+    <section class="section container">
+        <div class="glass-panel" style="padding: var(--spacing-lg);">
+            <h2>About Me</h2>
+            <p>I am a passionate researcher based in Albany, NY, dedicated to advancing the field of Computer Vision. My
+                work focuses on developing robust algorithms that can interpret complex visual data.</p>
+            <p>When I'm not training models, I'm capturing moments through my lens or reading about the latest tech
+                trends.</p>
+        </div>
+    </section>
+
+    <script src="js/main.js"></script>
 </body>
+
 </html>
