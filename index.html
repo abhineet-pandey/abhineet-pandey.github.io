@@ -5,56 +5,279 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Abhineet Pandey | AI Researcher & Developer</title>
+    <meta name="description"
+        content="Abhineet Pandey is a computer vision researcher and developer turning applied ML ideas into production-ready experiences.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="css/variables.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
+    <header class="site-header">
+        <div class="shell">
+            <a class="brand" href="index.html">
+                <span class="brand-badge">A</span>
+                Abhineet Pandey
+            </a>
+            <div class="nav">
+                <div class="nav-links">
+                    <a href="index.html" class="active">Home</a>
+                    <a href="resume.html">Resume</a>
+                    <a href="projects.html">Projects</a>
+                    <a href="thoughts.html">Thoughts</a>
+                    <a href="hobbies.html">Hobbies</a>
+                </div>
+                <div class="nav-cta">
+                    <a class="text-link" href="https://github.com/abhineet-pandey" target="_blank"
+                        rel="noreferrer">GitHub</a>
+                    <a class="btn primary" href="resume.html">Download Resume</a>
+                </div>
+                <button class="nav-toggle" aria-expanded="false" aria-label="Toggle navigation">Menu</button>
+            </div>
+        </div>
+    </header>
 
-    <!-- Navigation -->
-    <nav class="nav">
-        <div class="nav-container">
-            <a href="index.html" class="nav-logo">Abhineet.</a>
-            <div class="nav-links">
-                <a href="index.html" class="active">Home</a>
+    <main class="page">
+        <section class="hero">
+            <div class="hero-grid">
+                <div class="hero-copy">
+                    <p class="eyebrow">Actively open to Machine Learning / Computer Vision roles</p>
+                    <h1>I build computer vision systems that graduate from research to production.</h1>
+                    <p class="lede">Doctoral scholar at the University at Albany turning papers and prototypes into
+                        reliable experiences. I design models, ship data pipelines, and partner with product teams to
+                        deliver measurable impact.</p>
+                    <div class="cta-row">
+                        <a class="btn primary" href="projects.html">View projects</a>
+                        <a class="btn ghost" href="resume.html">See resume</a>
+                        <a class="text-link" href="https://github.com/abhineet-pandey" target="_blank"
+                            rel="noreferrer">GitHub</a>
+                    </div>
+                    <div class="inline-list">
+                        <span class="pill">Computer Vision</span>
+                        <span class="pill">Deep Learning</span>
+                        <span class="pill">MLOps mindset</span>
+                        <span class="pill">C++ & Python</span>
+                    </div>
+                </div>
+                <div class="card hero-card">
+                    <h3>Recruiter snapshot</h3>
+                    <ul class="hero-meta">
+                        <li><strong>Location:</strong> Albany, NY (open to relocation/remote)</li>
+                        <li><strong>Focus:</strong> perception, representation learning, applied research</li>
+                        <li><strong>What I ship:</strong> clean training code, reproducible experiments, crisp
+                            documentation</li>
+                        <li><strong>Collaboration:</strong> comfortable pairing with PMs, designers, and infra teams
+                        </li>
+                    </ul>
+                    <div class="stat-grid">
+                        <div class="stat">
+                            <div class="stat-label">Recent work</div>
+                            <div class="stat-value">CV systems</div>
+                            <p class="muted">Detection, tracking, and data-centric training flows.</p>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-label">Toolbox</div>
+                            <div class="stat-value">PyTorch · TensorFlow · C++</div>
+                            <p class="muted">MLOps via Python, containerization, and experimentation discipline.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section shell">
+            <div class="section-header">
+                <h2>What I do</h2>
+                <p>I combine research-grade modeling with engineering that stands up in production. Here is how I tend
+                    to add value to teams.</p>
+            </div>
+            <div class="grid grid-3">
+                <div class="card reveal">
+                    <h3>Applied research</h3>
+                    <p>I prototype quickly, benchmark honestly, and move the best ideas into polished pipelines with
+                        readable code and sane defaults.</p>
+                    <div class="tags">
+                        <span class="pill">Computer Vision</span>
+                        <span class="pill">Representation Learning</span>
+                        <span class="pill">Data Curation</span>
+                    </div>
+                </div>
+                <div class="card reveal">
+                    <h3>Engineering for delivery</h3>
+                    <p>From dataset versioning to model packaging, I build the glue that lets research work live in CI/CD
+                        and observability loops.</p>
+                    <div class="tags">
+                        <span class="pill">Python</span>
+                        <span class="pill">C++</span>
+                        <span class="pill">APIs & Services</span>
+                    </div>
+                </div>
+                <div class="card reveal">
+                    <h3>Clear communication</h3>
+                    <p>I turn experiments into crisp docs, publishable visuals, and approachable demos that help
+                        stakeholders make decisions fast.</p>
+                    <div class="tags">
+                        <span class="pill">Storytelling</span>
+                        <span class="pill">Mentorship</span>
+                        <span class="pill">Teaching</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section shell">
+            <div class="section-header">
+                <h2>Featured work</h2>
+                <p>Selected projects that show how I think about problem framing, model design, and the engineering
+                    needed to ship.</p>
+            </div>
+            <div class="grid grid-3">
+                <div class="card project-card reveal">
+                    <h3>MNIST vision baseline</h3>
+                    <p>Designed a clean CNN baseline with disciplined experimentation for the classic MNIST benchmark,
+                        focusing on reproducibility and reporting.</p>
+                    <div class="tags">
+                        <span class="pill">PyTorch</span>
+                        <span class="pill">CNN</span>
+                        <span class="pill">Experiment Tracking</span>
+                    </div>
+                    <div class="project-meta">
+                        <a class="text-link" href="https://github.com/abhineet-pandey/kaggle-MNIST" target="_blank"
+                            rel="noreferrer">View repository</a>
+                        <span class="tag">Vision</span>
+                    </div>
+                </div>
+                <div class="card project-card reveal">
+                    <h3>Producer/Consumer systems demo</h3>
+                    <p>Explored OS-level synchronization with a semaphore-driven producer/consumer implementation,
+                        documenting patterns for thread-safe queues.</p>
+                    <div class="tags">
+                        <span class="pill">C</span>
+                        <span class="pill">Systems</span>
+                        <span class="pill">Semaphores</span>
+                    </div>
+                    <div class="project-meta">
+                        <a class="text-link"
+                            href="https://github.com/abhineet-pandey/Producer-Consumer-Problem-with-Semaphores"
+                            target="_blank" rel="noreferrer">View repository</a>
+                        <span class="tag">Systems</span>
+                    </div>
+                </div>
+                <div class="card project-card reveal">
+                    <h3>Authentication in MVC</h3>
+                    <p>Built a lightweight MVC login service that demonstrates separation of concerns, testable
+                        controllers, and simple credential flows.</p>
+                    <div class="tags">
+                        <span class="pill">Java</span>
+                        <span class="pill">Web</span>
+                        <span class="pill">Security</span>
+                    </div>
+                    <div class="project-meta">
+                        <a class="text-link" href="https://github.com/abhineet-pandey/Simple_MVC_Login_" target="_blank"
+                            rel="noreferrer">View repository</a>
+                        <span class="tag">Backend</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section shell">
+            <div class="section-header">
+                <h2>Writing, reading, hobbies</h2>
+                <p>A glimpse into how I think outside of code—research notes, books shaping my perspective, and hobbies
+                    that keep me observant.</p>
+            </div>
+            <div class="grid grid-2">
+                <div class="card reveal">
+                    <h3>Recent thoughts</h3>
+                    <div class="list">
+                        <div>
+                            <div class="blog-meta">
+                                <span class="pill">Computer Vision</span>
+                                <span>Oct 2025</span>
+                            </div>
+                            <p><strong>Data-first vision models.</strong> Notes on cleaning, balancing, and validating
+                                small datasets before reaching for larger models.</p>
+                        </div>
+                        <div>
+                            <div class="blog-meta">
+                                <span class="pill">Research Life</span>
+                                <span>Sep 2025</span>
+                            </div>
+                            <p><strong>Making experiments legible.</strong> How to write logs, tables, and visuals so
+                                collaborators can trust your results.</p>
+                        </div>
+                        <div>
+                            <div class="blog-meta">
+                                <span class="pill">Career</span>
+                                <span>Aug 2025</span>
+                            </div>
+                            <p><strong>Bridging academia and product.</strong> Lessons from moving ideas from the lab to
+                                user-facing features.</p>
+                        </div>
+                    </div>
+                    <a class="text-link" href="thoughts.html">See all thoughts</a>
+                </div>
+                <div class="card reveal">
+                    <h3>Currently into</h3>
+                    <div class="list">
+                        <div>
+                            <strong>Books</strong>
+                            <p>Deep Learning (Goodfellow), Designing Data-Intensive Applications (Kleppmann), Sapiens
+                                (Harari).</p>
+                        </div>
+                        <div>
+                            <strong>Hobbies</strong>
+                            <p>Photography walks, reading about design, and tinkering with new vision model papers.</p>
+                        </div>
+                        <div>
+                            <strong>Latest photos</strong>
+                            <div class="gallery-grid">
+                                <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=800&q=80"
+                                    alt="Evening skyline">
+                                <img src="https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f?auto=format&fit=crop&w=800&q=80"
+                                    alt="Street photo">
+                                <img src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=800&q=80"
+                                    alt="Nature trail">
+                            </div>
+                        </div>
+                    </div>
+                    <a class="text-link" href="hobbies.html">More hobbies</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="section shell">
+            <div class="card reveal">
+                <div class="section-header">
+                    <h2>Let’s build something together</h2>
+                    <p>I thrive in teams that value rigorous experimentation and shipping. If you need an engineer who
+                        can translate research into dependable features, let’s talk.</p>
+                </div>
+                <div class="cta-row">
+                    <a class="btn primary" href="resume.html">Resume & skills</a>
+                    <a class="btn ghost" href="projects.html">Projects</a>
+                    <a class="text-link" href="mailto:hello@abhineet.xyz">Email me</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="shell">
+            <div>© 2025 Abhineet Pandey · Building AI systems with care.</div>
+            <div class="footer-links">
                 <a href="resume.html">Resume</a>
                 <a href="projects.html">Projects</a>
                 <a href="thoughts.html">Thoughts</a>
-                <a href="hobbies.html">Hobbies</a>
-            </div>
-            <div class="menu-toggle">☰</div>
-        </div>
-    </nav>
-
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-content">
-            <img src="https://avatars.githubusercontent.com/abhineet-pandey" alt="Abhineet Pandey" class="hero-avatar">
-            <h1>Abhineet Pandey</h1>
-            <p class="hero-subtitle">Doctoral Scholar | AI & Computer Vision Researcher</p>
-            <p>Exploring the frontiers of Artificial Intelligence, Machine Learning, and Computer Vision. Building
-                intelligent systems that see and understand the world.</p>
-            <div style="margin-top: var(--spacing-md);">
-                <a href="projects.html" class="btn btn-primary">View My Work</a>
-                <a href="resume.html" class="btn"
-                    style="background: var(--bg-secondary); margin-left: var(--spacing-sm);">Resume</a>
+                <a href="https://github.com/abhineet-pandey" target="_blank" rel="noreferrer">GitHub</a>
             </div>
         </div>
-    </section>
-
-    <!-- About Preview -->
-    <section class="section container">
-        <div class="glass-panel" style="padding: var(--spacing-lg);">
-            <h2>About Me</h2>
-            <p>I am a passionate researcher based in Albany, NY, dedicated to advancing the field of Computer Vision. My
-                work focuses on developing robust algorithms that can interpret complex visual data.</p>
-            <p>When I'm not training models, I'm capturing moments through my lens or reading about the latest tech
-                trends.</p>
-        </div>
-    </section>
+    </footer>
 
     <script src="js/main.js"></script>
 </body>
