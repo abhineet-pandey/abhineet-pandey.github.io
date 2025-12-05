@@ -1,0 +1,91 @@
+<svg width="1400" height="420" viewBox="0 0 1400 420" xmlns="http://www.w3.org/2000/svg">
+
+  <!-- GOLD GRADIENT + METALLIC SHINE -->
+  <defs>
+    <linearGradient id="luxegold" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%"   stop-color="#8d6b1f"/>
+      <stop offset="15%"  stop-color="#d4b155"/>
+      <stop offset="35%"  stop-color="#fff5d0"/>
+      <stop offset="55%"  stop-color="#f1d67b"/>
+      <stop offset="80%"  stop-color="#c4a239"/>
+      <stop offset="100%" stop-color="#8d6b1f"/>
+    </linearGradient>
+
+    <!-- Cinematic deep shadow -->
+    <filter id="cinematic_shadow" x="-40%" y="-40%" width="200%" height="200%">
+      <feDropShadow dx="0" dy="6" stdDeviation="12" flood-color="#000000" flood-opacity="0.65"/>
+    </filter>
+
+    <!-- Soft glowing rim light -->
+    <filter id="softglow">
+      <feGaussianBlur stdDeviation="2.5" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- ====== LUXURY SHIELD EMBLEM ====== -->
+  <path d="
+        M200 60 
+        L305 130 
+        L305 295 
+        L200 360 
+        L95 295 
+        L95 130 Z"
+        stroke="url(#luxegold)"
+        stroke-width="10"
+        fill="none"
+        filter="url(#cinematic_shadow)"
+        opacity="0.98"/>
+
+  <!-- Inner glowing border for premium feel -->
+  <path d="
+        M200 80 
+        L285 140 
+        L285 275 
+        L200 330 
+        L115 275 
+        L115 140 Z"
+        stroke="url(#luxegold)"
+        stroke-width="4"
+        fill="none"
+        opacity="0.7"
+        filter="url(#softglow)"/>
+
+  <!-- ====== LARGE AP MONOGRAM ====== -->
+  <text x="200" y="235"
+        text-anchor="middle"
+        font-family="Cinzel, Trajan Pro, serif"
+        font-size="105"
+        font-weight="700"
+        fill="url(#luxegold)"
+        filter="url(#cinematic_shadow)">
+    AP
+  </text>
+
+  <!-- ====== BRAND NAME ====== -->
+  <text x="380" y="190"
+        font-family="Poppins, Montserrat, Arial"
+        font-size="78"
+        font-weight="600"
+        letter-spacing="5"
+        fill="url(#luxegold)"
+        filter="url(#cinematic_shadow)">
+    ABHINEET PANDEY
+  </text>
+
+  <!-- ====== TAGLINE ====== -->
+  <text x="385" y="260"
+        font-family="Poppins, Montserrat, Arial"
+        font-size="34"
+        font-weight="300"
+        letter-spacing="18"
+        fill="url(#luxegold)"
+        opacity="0.92">
+    PHOTOGRAPHY
+  </text>
+
+</svg>
+
