@@ -237,16 +237,53 @@
                         <div>
                             <strong>Latest photos</strong>
                             <div class="gallery-grid">
-                                <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=800&q=80"
-                                    alt="Evening skyline">
-                                <img src="https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f?auto=format&fit=crop&w=800&q=80"
-                                    alt="Street photo">
-                                <img src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=800&q=80"
-                                    alt="Nature trail">
+                                <img src="images/hobbies/18124076137031047.jpg" alt="Reflections on a building facade">
+                                <img src="images/hobbies/17882171390742866.jpg" alt="Autumn leaves on branches">
+                                <img src="images/hobbies/18017681518261829.jpg" alt="Sunset clouds over horizon">
                             </div>
                         </div>
                     </div>
                     <a class="text-link" href="hobbies.html">More hobbies</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="section shell visitor-section">
+            <div class="section-header">
+                <h2>Visitors around the globe</h2>
+                <p>A live footprint of who’s stopping by and from which continent.</p>
+            </div>
+            <div class="visitor-grid">
+                <div class="card map-card reveal">
+                    <div class="world-map" aria-hidden="true">
+                        <svg viewBox="0 0 1000 520" role="presentation">
+                            <path class="land" d="M99 168l48-23 66 12 31-22 60 6 35 35-19 35 9 32-26 10-24-16-27 18-25-19-35 17-35-3-10-39-48-13z" />
+                            <path class="land" d="M269 270l39 10 10 30-11 26 10 44-23 18-20-10-20 8-14-35 14-20-4-31z" />
+                            <path class="land" d="M366 179l55-24 58 6 42-27 38 21 32-16 43 9 34 48-23 30-48-6-17 26-34-9-44 33-46-13-25-27-35-2-6-36z" />
+                            <path class="land" d="M657 152l46-12 37 13 26-15 43 10 31-25 40 9 13 37-26 24-20-4-24 19 9 25-13 28-30-6-20 14-39-8-26 17-34-17-3-34 21-21-9-25z" />
+                            <path class="land" d="M795 297l41-10 21 20 31 5 13 32-32 24-50-9-25 10-17-18 8-36z" />
+                            <path class="land" d="M704 320l23 18-9 26-29 9-19-12 5-26z" />
+                        </svg>
+                        <span class="map-dot" data-continent-dot="NA" style="--x: 26%; --y: 34%;" title="North America"></span>
+                        <span class="map-dot" data-continent-dot="SA" style="--x: 32%; --y: 68%;" title="South America"></span>
+                        <span class="map-dot" data-continent-dot="EU" style="--x: 46%; --y: 33%;" title="Europe"></span>
+                        <span class="map-dot" data-continent-dot="AF" style="--x: 48%; --y: 57%;" title="Africa"></span>
+                        <span class="map-dot" data-continent-dot="AS" style="--x: 67%; --y: 42%;" title="Asia"></span>
+                        <span class="map-dot" data-continent-dot="OC" style="--x: 81%; --y: 68%;" title="Oceania"></span>
+                    </div>
+                    <p class="muted map-note">Dots scale as visits increase. Location is resolved on your device only.</p>
+                </div>
+                <div class="card visitor-stats reveal">
+                    <h3>Visits by continent</h3>
+                    <ul class="continent-list">
+                        <li><span>North America</span><span data-continent-count="NA">—</span></li>
+                        <li><span>South America</span><span data-continent-count="SA">—</span></li>
+                        <li><span>Europe</span><span data-continent-count="EU">—</span></li>
+                        <li><span>Africa</span><span data-continent-count="AF">—</span></li>
+                        <li><span>Asia</span><span data-continent-count="AS">—</span></li>
+                        <li><span>Oceania</span><span data-continent-count="OC">—</span></li>
+                    </ul>
+                    <p class="muted">Counts update instantly and stay anonymous—just a snapshot of global interest.</p>
                 </div>
             </div>
         </section>
@@ -275,6 +312,10 @@
                 <a href="projects.html">Projects</a>
                 <a href="thoughts.html">Thoughts</a>
                 <a href="https://github.com/abhineet-pandey" target="_blank" rel="noreferrer">GitHub</a>
+            </div>
+            <div class="footer-meta">
+                <span class="visit-metric"><strong>Visits:</strong> <span data-visit-count>—</span></span>
+                <span class="visit-metric"><strong>Your location:</strong> <span data-visit-location>Detecting…</span></span>
             </div>
         </div>
     </footer>
