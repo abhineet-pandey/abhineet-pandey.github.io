@@ -4,13 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projects | Abhineet Pandey</title>
-    <meta name="description" content="Selected projects by Abhineet Pandey that demonstrate applied ML and engineering.">
+    <title>Research Projects | Abhineet Pandey</title>
+    <meta name="description" content="Research and engineering projects by Abhineet Pandey across computer vision, deep learning, and reproducible ML systems.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Sora:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/variables.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
@@ -30,10 +28,17 @@
                     <a href="thoughts.html">Thoughts</a>
                     <a href="hobbies.html">Hobbies</a>
                 </div>
+                <div class="theme-switcher">
+                    <select class="theme-select" data-theme-select aria-label="Select theme">
+                        <option value="blue-corporate">Blue Corporate</option>
+                        <option value="teal-professional">Teal Professional</option>
+                        <option value="executive-gold">Executive Gold</option>
+                    </select>
+                </div>
                 <div class="nav-cta">
                     <a class="text-link" href="https://github.com/abhineet-pandey" target="_blank"
                         rel="noreferrer">GitHub</a>
-                    <a class="btn primary" href="mailto:apandey@albany.edu?subject=Project%20collaboration">Get in
+                    <a class="btn primary" href="mailto:abhineetpandey04@gmail.com?subject=Project%20collaboration">Get in
                         touch</a>
                 </div>
                 <button class="nav-toggle" aria-expanded="false" aria-label="Toggle navigation">Menu</button>
@@ -46,139 +51,110 @@
             <div class="hero-grid">
                 <div class="hero-copy">
                     <p class="eyebrow">Selected work</p>
-                    <h1>Applied computer vision and AI projects from research to deployment.</h1>
-                    <p class="lede">These projects map directly to my resume: detection, tracking, media forensics,
-                        dataset curation, and ML systems built for real-world constraints.</p>
+                    <h1>Applied AI projects across healthcare, forensics, and industrial computer vision.</h1>
+                    <p class="lede">This portfolio reflects the projects on my resume, including DARPA-funded
+                        forensics, rail analytics systems, seizure detection research, and LLM-powered product systems.</p>
                     <div class="cta-row">
-                        <a class="btn primary" href="mailto:apandey@albany.edu?subject=Discuss%20a%20project">Hire me
+                        <a class="btn primary" href="mailto:abhineetpandey04@gmail.com?subject=Discuss%20a%20project">Hire me
                             for your team</a>
                         <a class="btn ghost" href="resume.html">See resume</a>
                     </div>
                 </div>
                 <div class="card hero-card">
-                    <h3>Project ethos</h3>
+                    <h3>Project profile</h3>
                     <ul class="hero-meta">
-                        <li><strong>Baseline first:</strong> clean data, clear metrics, reproducible pipelines.</li>
-                        <li><strong>Deployment-minded:</strong> edge constraints, retrieval systems, and evaluation baked in.</li>
-                        <li><strong>Documentation:</strong> concise READMEs, results tables, and handoff notes.</li>
+                        <li><strong>Domains:</strong> healthcare AI, media forensics, rail transportation safety.</li>
+                        <li><strong>Methods:</strong> object detection, tracking, re-identification, LLM + RAG systems.</li>
+                        <li><strong>Delivery:</strong> reproducible research pipelines and deployable engineering artifacts.</li>
                     </ul>
                 </div>
             </div>
         </section>
 
         <section class="section shell">
-            <div class="section-header">
-                <h2>Applied research projects</h2>
-                <p>Work spanning computer vision, media forensics, and edge deployments.</p>
-            </div>
+                <div class="section-header">
+                    <h2>Research portfolio</h2>
+                    <p>Flagship projects directly aligned with my resume and publication record.</p>
+                </div>
             <div class="grid grid-2">
                 <div class="card project-card reveal">
-                    <h3>Seizure Detection in Animals</h3>
-                    <p class="muted">AMC, GE HealthCare, UAlbany - Mar 2023 to Present</p>
-                    <p>Pose estimation, seizure state prediction, and behavior analysis for induced and natural conditions.</p>
+                    <h3>LLM Assistant for Research Knowledge Automation</h3>
+                    <p>Designed a full-stack assistant for retrieval and Q&A with hybrid search, reranking, and
+                        multi-step agentic workflows for institutional research support.</p>
                     <div class="tags">
-                        <span class="pill">Computer Vision</span>
-                        <span class="pill">Pose Estimation</span>
-                        <span class="pill">Biomedical</span>
+                        <span class="pill">LLM</span>
+                        <span class="pill">RAG</span>
+                        <span class="pill">Cross-Encoder</span>
+                        <span class="pill">Evaluation</span>
+                    </div>
+                    <div class="project-meta">
+                        <a class="text-link" href="resume.html">See resume details</a>
+                        <span class="tag">GenAI</span>
                     </div>
                 </div>
 
                 <div class="card project-card reveal">
                     <h3>DARPA Semantic Forensics (SemaFor)</h3>
-                    <p class="muted">Kitware &amp; UAlbany - Jan 2020 to Dec 2023</p>
-                    <p>Detected falsified media/news using semantic forensics across object, scene text, and human pose signals.</p>
+                    <p>Developed semantic pipelines to detect falsified media using object-level cues, scene text, and
+                        human-pose evidence across manipulated content.</p>
                     <div class="tags">
-                        <span class="pill">Media Forensics</span>
+                        <span class="pill">Forensics</span>
                         <span class="pill">Detection</span>
-                        <span class="pill">ML</span>
+                        <span class="pill">Multi-signal Reasoning</span>
+                    </div>
+                    <div class="project-meta">
+                        <a class="text-link" href="resume.html">See resume details</a>
+                        <span class="tag">Defense</span>
                     </div>
                 </div>
 
                 <div class="card project-card reveal">
-                    <h3>Railcar Locomotive Yard Detection</h3>
-                    <p class="muted">GE Research &amp; UAlbany - Jul 2019 to Dec 2021</p>
-                    <p>Rail yard management using CV analytics: object detection, tracking, and re-identification with edge plus control center architecture.</p>
+                    <h3>Railcar Locomotive Yard Detection System</h3>
+                    <p>Built a rail-yard management platform using CV detection, tracking, and re-identification with
+                        edge-control-center architecture and NVIDIA AGX Xavier.</p>
                     <div class="tags">
-                        <span class="pill">Detection</span>
+                        <span class="pill">Edge AI</span>
                         <span class="pill">Tracking</span>
-                        <span class="pill">Edge</span>
+                        <span class="pill">Re-ID</span>
+                    </div>
+                    <div class="project-meta">
+                        <a class="text-link" href="resume.html">See resume details</a>
+                        <span class="tag">Industrial AI</span>
                     </div>
                 </div>
 
                 <div class="card project-card reveal">
-                    <h3>Rail Crossing Point Protection</h3>
-                    <p class="muted">GE Research &amp; UAlbany - Jan 2020 to Jan 2021</p>
-                    <p>Enhanced rail crossing safety using instance segmentation, multi-object tracking, and rule-based logic.</p>
+                    <h3>Seizure Detection in Animals (AMC-GE-UAlbany)</h3>
+                    <p>Developed system components for pose estimation, seizure-state prediction, and behavior
+                        analysis under induced and natural conditions.</p>
                     <div class="tags">
-                        <span class="pill">Instance Segmentation</span>
-                        <span class="pill">Tracking</span>
-                        <span class="pill">Safety</span>
+                        <span class="pill">Healthcare AI</span>
+                        <span class="pill">Pose Estimation</span>
+                        <span class="pill">Prediction</span>
                     </div>
-                </div>
-
-                <div class="card project-card reveal">
-                    <h3>AI City Challenge</h3>
-                    <p class="muted">UAlbany - Jan 2021 to Aug 2021</p>
-                    <p>Analyzed submissions for detection, tracking, re-identification, and road anomaly tasks; reported system-level insights.</p>
-                    <div class="tags">
-                        <span class="pill">Benchmarking</span>
-                        <span class="pill">Detection</span>
-                        <span class="pill">Tracking</span>
-                    </div>
-                </div>
-
-                <div class="card project-card reveal">
-                    <h3>UA-DETRAC Dataset v1.5</h3>
-                    <p class="muted">Research Foundation of SUNY - Jul 2019 to Dec 2019</p>
-                    <p>Added vehicle colors and subclasses and verified ground truth for large-scale traffic analytics.</p>
-                    <div class="tags">
-                        <span class="pill">Dataset Curation</span>
-                        <span class="pill">Annotation</span>
-                        <span class="pill">Traffic</span>
+                    <div class="project-meta">
+                        <a class="text-link" href="resume.html">See resume details</a>
+                        <span class="tag">Biomedical</span>
                     </div>
                 </div>
             </div>
         </section>
 
         <section class="section shell">
-            <div class="section-header">
-                <h2>Academic &amp; personal projects</h2>
-                <p>Hands-on builds that explore detection, prediction, web, and IoT systems.</p>
-            </div>
-            <div class="grid grid-2">
                 <div class="card reveal">
+                    <div class="section-header">
+                        <h2>How I run research projects</h2>
+                        <p>The operating principles I use to move quickly while maintaining scientific quality.</p>
+                    </div>
                     <ul class="list">
-                        <li><strong>Vehicle type and color detection:</strong> YOLOv3 and KNN on UA-DETRAC for 12 vehicle types and 9 colors with strong accuracy.</li>
-                        <li><strong>Movie success prediction:</strong> Twitter and IMDb mining; ~80% accuracy using ML classifiers.</li>
-                        <li><strong>Stock price prediction:</strong> Intraday pipeline using pattern recognition, NLP, storyline analysis across tweets, news, and market data.</li>
-                        <li><strong>Library Management System:</strong> Java app handling institutional library workflows.</li>
+                    <li><strong>Begin with baselines:</strong> establish reference performance before introducing complexity.</li>
+                    <li><strong>Evaluate carefully:</strong> track metrics, failure cases, and ablations in each cycle.</li>
+                    <li><strong>Document decisions:</strong> keep assumptions, choices, and results easy to audit.</li>
+                    <li><strong>Iterate to production:</strong> harden promising prototypes into maintainable systems.</li>
                     </ul>
-                </div>
-                <div class="card reveal">
-                    <ul class="list">
-                        <li><strong>Social Geo Tagging Web App:</strong> PHP app aggregating social data and mapping alumni connections.</li>
-                        <li><strong>Online Yearbook:</strong> Full-stack web app for comments and social links.</li>
-                        <li><strong>Smart Attendance System:</strong> IoT RFID and Arduino with Google Sheets API backend.</li>
-                        <li><strong>Hand Gesture Control:</strong> MATLAB-based webcam gesture recognition for PC control.</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-
-        <section class="section shell">
-            <div class="card reveal">
-                <div class="section-header">
-                    <h2>How I approach projects</h2>
-                    <p>The principles I use to move fast without sacrificing quality.</p>
-                </div>
-                <ul class="list">
-                    <li><strong>Start with baselines:</strong> establish simple, reliable reference points before adding complexity.</li>
-                    <li><strong>Measure and log:</strong> track every experiment, metric, and artifact for future comparison.</li>
-                    <li><strong>Communicate early:</strong> share progress with concise docs and demos to align stakeholders.</li>
-                    <li><strong>Ship in loops:</strong> iterate in small, testable increments that can be deployed and observed.</li>
-                </ul>
                 <div class="cta-row" style="margin-top: var(--space-md);">
-                    <a class="btn primary" href="mailto:apandey@albany.edu?subject=Collaboration%20idea">Start a collaboration</a>
+                    <a class="btn primary" href="mailto:abhineetpandey04@gmail.com?subject=Collaboration%20idea">Start a
+                        collaboration</a>
                     <a class="btn ghost" href="thoughts.html">Read my notes</a>
                 </div>
             </div>

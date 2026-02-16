@@ -1,39 +1,45 @@
 :root {
-    /* Palette */
-    --bg: #f5f7fa;
-    --surface: #ffffff;
-    --surface-soft: #eef2f7;
-    --ink: #0b1a2f;
-    --muted: #4b5565;
-    --muted-2: #6b7285;
-    --primary: #2563eb;
-    --accent: #0ea5e9;
-    --border: #e5e7eb;
+    /* Brand + base palette */
+    --bg: #f5f8ff;
+    --bg-elev: #ffffff;
+    --surface: rgba(255, 255, 255, 0.86);
+    --surface-strong: #ffffff;
+    --surface-soft: rgba(241, 245, 255, 0.9);
+    --ink: #16243a;
+    --muted: #546683;
+    --muted-2: #7286a6;
 
-    /* Gradients & Effects */
-    --hero-gradient: radial-gradient(circle at 12% 18%, rgba(37, 99, 235, 0.12), transparent 32%),
-        radial-gradient(circle at 88% 8%, rgba(14, 165, 233, 0.1), transparent 28%),
-        linear-gradient(135deg, #f8fafc 0%, #ffffff 100%);
-    --shadow: 0 12px 32px rgba(15, 23, 42, 0.08);
-    --shadow-lg: 0 20px 70px rgba(15, 23, 42, 0.1);
+    /* Accents */
+    --primary: #2db8d8;
+    --primary-strong: #1f8fba;
+    --accent: #ffbf6e;
+    --border: rgba(117, 139, 176, 0.28);
+
+    /* Effects */
+    --hero-gradient:
+        radial-gradient(circle at 10% 10%, rgba(45, 184, 216, 0.18), transparent 44%),
+        radial-gradient(circle at 88% 20%, rgba(255, 191, 110, 0.2), transparent 42%),
+        radial-gradient(circle at 50% 120%, rgba(31, 143, 186, 0.14), transparent 48%);
+    --shadow: 0 14px 34px rgba(55, 83, 122, 0.16);
+    --shadow-soft: 0 8px 22px rgba(55, 83, 122, 0.11);
+    --shadow-lg: 0 24px 54px rgba(55, 83, 122, 0.18);
+    --glow: 0 0 0 1px rgba(45, 184, 216, 0.28), 0 12px 26px rgba(45, 184, 216, 0.18);
 
     /* Typography */
-    --font-display: 'Space Grotesk', 'Sora', sans-serif;
-    --font-body: 'Inter', 'Space Grotesk', sans-serif;
+    --font-display: 'Sora', 'Avenir Next', 'Segoe UI', sans-serif;
+    --font-body: 'Manrope', 'Avenir Next', 'Segoe UI', sans-serif;
 
     /* Spacing */
     --space-xxs: 0.35rem;
     --space-xs: 0.65rem;
     --space-sm: 1rem;
-    --space-md: 1.75rem;
-    --space-lg: 3rem;
-    --space-xl: 5rem;
+    --space-md: 2rem;
+    --space-lg: 4rem;
+    --space-xl: 6rem;
 
-    /* Radii */
+    /* Shape + layout */
     --radius: 14px;
-    --radius-lg: 20px;
-
-    /* Layout */
-    --content-max: 1180px;
-    --transition: 0.25s ease;
+    --radius-lg: 28px;
+    --content-max: 1140px;
+    --transition: 0.28s cubic-bezier(0.2, 0.8, 0.2, 1);
 }

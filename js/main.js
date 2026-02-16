@@ -1,4 +1,135 @@
 document.addEventListener('DOMContentLoaded', () => {
+    // Theme switcher (shared across all pages) - auto random by time
+    const themeSelect = document.querySelector('[data-theme-select]');
+    const themeClasses = ['theme-blue-corporate', 'theme-teal-professional', 'theme-executive-gold'];
+    const validThemes = ['blue-corporate', 'teal-professional', 'executive-gold'];
+
+    const applyTheme = (themeName) => {
+        const safeTheme = validThemes.includes(themeName) ? themeName : 'blue-corporate';
+        document.body.classList.remove(...themeClasses);
+        document.body.classList.add(`theme-${safeTheme}`);
+        return safeTheme;
+    };
+
+    const getTimeRandomTheme = () => {
+        const now = new Date();
+        // Seed changes every minute so the theme rotates over time.
+        const seed = now.getFullYear() * 1000000
+            + (now.getMonth() + 1) * 10000
+            + now.getDate() * 100
+            + now.getHours() * 60
+            + now.getMinutes();
+        const index = Math.abs((seed * 9301 + 49297) % 233280) % validThemes.length;
+        return validThemes[index];
+    };
+
+    const activeTheme = applyTheme(getTimeRandomTheme());
+
+    if (themeSelect) {
+        themeSelect.value = activeTheme;
+        themeSelect.addEventListener('change', () => {
+            applyTheme(themeSelect.value);
+        });
+    }
+
+    // Home side widgets: sync latest papers and blog posts from source pages
+    const paperReadingListEl = document.querySelector('[data-paper-reading-list]');
+    const recentBlogListEl = document.querySelector('[data-recent-blog-list]');
+
+    const renderSideList = (targetEl, items, emptyLabel) => {
+        if (!targetEl) return;
+        targetEl.innerHTML = '';
+
+        if (!items.length) {
+            const li = document.createElement('li');
+            const date = document.createElement('span');
+            date.className = 'update-date';
+            date.textContent = '—';
+            li.appendChild(date);
+            li.append(document.createTextNode(` ${emptyLabel}`));
+            targetEl.appendChild(li);
+            return;
+        }
+
+        items.forEach(({ date, title, href }) => {
+            const li = document.createElement('li');
+            const dateTag = document.createElement('span');
+            dateTag.className = 'update-date';
+            dateTag.textContent = date || 'Recent';
+            li.appendChild(dateTag);
+
+            if (href) {
+                const link = document.createElement('a');
+                link.className = 'update-link';
+                link.href = href;
+                link.textContent = title;
+                li.appendChild(link);
+            } else {
+                li.append(document.createTextNode(` ${title}`));
+            }
+
+            targetEl.appendChild(li);
+        });
+    };
+
+    const parseYear = (text) => {
+        const matches = text.match(/\b(19|20)\d{2}\b/g);
+        return matches ? matches[matches.length - 1] : 'Recent';
+    };
+
+    if (paperReadingListEl || recentBlogListEl) {
+        const parser = new DOMParser();
+
+        if (paperReadingListEl) {
+            fetch('resume.html')
+                .then((res) => res.text())
+                .then((html) => {
+                    const doc = parser.parseFromString(html, 'text/html');
+                    const progressHeading = Array.from(doc.querySelectorAll('h3'))
+                        .find((h3) => h3.textContent.toLowerCase().includes('in progress'));
+                    const items = progressHeading
+                        ? Array.from(progressHeading.closest('.card')?.querySelectorAll('li') || [])
+                            .slice(0, 3)
+                            .map((li) => {
+                                const strongText = li.querySelector('strong')?.textContent?.trim();
+                                const rawText = li.textContent.replace(/\s+/g, ' ').trim();
+                                const title = strongText || rawText;
+                                return {
+                                    date: parseYear(rawText),
+                                    title,
+                                    href: 'resume.html'
+                                };
+                            })
+                        : [];
+                    renderSideList(paperReadingListEl, items, 'Paper list unavailable');
+                })
+                .catch(() => {
+                    renderSideList(paperReadingListEl, [], 'Paper list unavailable');
+                });
+        }
+
+        if (recentBlogListEl) {
+            fetch('thoughts.html')
+                .then((res) => res.text())
+                .then((html) => {
+                    const doc = parser.parseFromString(html, 'text/html');
+                    const items = Array.from(doc.querySelectorAll('article.blog-card'))
+                        .slice(0, 3)
+                        .map((article) => {
+                            const title = article.querySelector('h3')?.textContent?.trim() || 'Blog update';
+                            const date = article.querySelector('.blog-meta span:last-child')?.textContent?.trim() || 'Recent';
+                            const rawHref = article.querySelector('a[href]')?.getAttribute('href') || 'thoughts.html';
+                            const href = rawHref === '#' ? 'thoughts.html' : rawHref;
+                            return { date, title, href };
+                        });
+                    renderSideList(recentBlogListEl, items, 'No blog posts yet');
+                })
+                .catch(() => {
+                    renderSideList(recentBlogListEl, [], 'No blog posts yet');
+                });
+        }
+    }
+
     // Mobile nav toggle
     const navToggle = document.querySelector('.nav-toggle');
     const navLinks = document.querySelector('.nav-links');
